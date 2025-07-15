@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .block {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 5px solid #e74c3c;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+        .block-header {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #c0392b;
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #2980b9;
+        }
+        .example-list li {
+            background-color: #dbe4e8;
+            padding: 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            border-left: 3px solid #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Introduccion a Django</h1>
+
+        <div class="block">
+            <div class="block-header">¿Qué es Django?</div>
+            <p>Django no es simplemente una herramienta, es una casi todo el desarrollo, es en mi opinion como si una sola persona construyera una casa completa, el solo hace casi todo. Eso es Django para el desarrollo web. Es un <strong>framework web de alto nivel, de código abierto, escrito en Python</strong>, que fomenta el desarrollo rápido y un diseño limpio y pragmático.</p>
+            <p>Su objetivo es permitirte construir aplicaciones web complejas y escalables de manera eficiente, sin reinventar la rueda constantemente. Se encarga de gran parte de la molestia del desarrollo web, para que puedas concentrarte en la lógica única de tu proyecto y aplicaciones internas.</p>
+        </div>
+
+        <div class="block">
+            <div class="block-header">Definición de Django</div>
+            <p>Django es un <strong>framework de desarrollo web full-stack</strong>(bueno casi, actualemnte se necesita mas css que se complementa con otro framework) que sigue el patrón arquitectónico <strong>Model-View-Template (MVT)</strong>, una variación del más conocido y usado = Model-View-Controller (MVC).</p>
+            <p>Proporciona un conjunto completo de componentes listos para usar y convenientes para la creación de sitios web de forma rapida. Desde la gestión de bases de datos hasta la autenticación de usuarios y la administración, Django te equipa con las herramientas para poder construir tu web.</p>
+        </div>
+
+        <div class="block">
+            <div class="block-header">Estructura de Django</div>
+            <p>La estructura de Django es clave para su eficiencia. Se organiza en <strong>"aplicaciones"</strong> (apps), que son módulos del proyecto y son como funciones es decir reutilizables, y un <strong>"proyecto"</strong> que organiza las aplicaciones. Esto permite una buena gestion y escalabilidad.</p>
+            <ul>
+                <li><strong>Modelos (Models):</strong> Representan mayormente la base de datos, cómo se almacenan en la base de datos (por ejemplo, un usuario, un producto). Se definen como clases Python y Django se encarga de la interacción con la base de datos.</li>
+                <li><strong>Vistas (Views):</strong> Las Views Reciben una petición web, interactúan con los modelos para obtener o manipular datos y luego pasan esos datos a una plantilla (Que es como el usuario las mira).</li>
+                <li><strong>Plantillas (Templates):</strong> Definen la interfaz de usuario. Son archivos HTML con marcadores especiales que Django reemplaza con datos dinámicos generados por las Views. Es el lienzo donde se pinta el resultado final.</li>
+                <li><strong>URLs:</strong> Un mapeador de URL que dirige las peticiones web a la vista correcta basada en el camino (path) de la URL.</li>
+                <li><strong>Administrador (Admin):</strong> Una interfaz de administración que se genera automaticamente y que permite a los desarrolladores gestionar el contenido de la base de datos sin escribir código adicional. </li>
+            </ul>
+        </div>
+
+        <div class="block">
+            <div class="block-header">Ventajas</div>
+            <ul>
+                <li><strong>Desarrollo Rápido:</strong> Con su filosofía "Don't Repeat Yourself"/"No te repitas a ti mismo" (DRY) y sus componentes listos para usar,acelera drásticamente el proceso de desarrollo.</li>
+                <li><strong>Seguridad Integrada:</strong> Proporciona protección incorporada contra muchas vulnerabilidades comunes como inyección SQL y evidentemnte varias mas.</li>
+                <li><strong>Escalabilidad:</strong> Capaz de manejar un alto tráfico lo que lo hace adecuado para aplicaciones de cualquier tamaño, desde pequeños blogs hasta grandes.</li>
+                <li><strong>(batteries included)Baterías Incluidas:</strong> Viene con una gran cantidad de funcionalidades listas para usar, como un sistema de administración, autenticación de usuarios, caché, etc. Menos tiempo configurando, más tiempo construyendo.</li>
+                <li><strong>Comunidad Grande y Activa:</strong> Una vasta comunidad de desarrolladores significa abundante documentación, tutoriales y soporte(Basicamente, no te quedaras en un error porque seguramente a alguien mas ya le paso y lo soluciono).</li>
+                <li><strong>Python:</strong> Al estar escrito en Python, un lenguaje claro, legible y sobre todo robusto, hereda todas sus ventajas, incluyendo su versatilidad.</li>
+            </ul>
+        </div>
+
+        <div class="block">
+            <div class="block-header">Desventajas</div>
+            <ul>
+                <li><strong>Curva de Aprendizaje Inicial:</strong> Para los principiantes, la gran cantidad de características y la (batteries included) pueden ser un poco abrumadoras al principio.</li>
+                <li><strong>Rendimiento para Operaciones Específicas:</strong> Para aplicaciones que requieren procesamiento intensivo de datos en tiempo real o latencias extremadamente bajas (como juegos en línea muy dinámicos), otros lenguajes o frameworks podrían ser marginalmente más eficientes, aunque para la mayoría de las aplicaciones web, Django es más que suficiente.</li>
+            </ul>
+        </div>
+
+        <div class="block">
+            <div class="block-header">Ejemplos de Programación(Donde se uso Django)</div>
+            <p>Django ha sido la columna vertebral de innumerables aplicaciones web exitosas, demostrando su robustez y flexibilidad en el mundo real.</p>
+            <ul class="example-list">
+                <li>
+                    <strong>Spotify:</strong> ¡SI! Spotify es un ejemplo. Si bien su ecosistema es enorme y utiliza una variedad de tecnologías (Java, C++, Python, etc.), Django es una parte fundamental de muchos de sus servicios backend. ¿Por qué lo usaron? Para manejar la enorme cantidad de datos de usuarios, la lógica de negocio relacionada con las recomendaciones, la gestión de la biblioteca musical y la infraestructura de su API. Django les permitió desarrollar rápidamente y escalar sus servicios para millones de usuarios, gestionando peticiones complejas con eficiencia.
+                </li>
+                <li>
+                    <strong>Instagram:</strong> Una de las plataformas de redes sociales más grandes del mundo. Instagram eligió Django por su capacidad para escalar a millones de usuarios, su rapidez en el desarrollo y las "baterías incluidas" que les permitieron enfocarse en las características principales de la aplicación sin preocuparse por la infraestructura básica.
+                </li>
+                <li>
+                    <strong>Mozilla (Firefox):</strong> Gran parte de los sitios web y servicios de Mozilla, incluyendo sus herramientas de desarrollo y la base de datos de documentación para desarrolladores (MDN Web Docs), están construidos sobre Django. Lo usaron por su robustez, seguridad y la facilidad para manejar grandes volúmenes de contenido y usuarios.
+                </li>
+            </ul>
+            <p>Estos ejemplos demuestran que Django no es solo una herramienta. Te permite construir con la velocidad y la fortaleza necesarias para el campo del desarrollo web.</p>
+        </div>
+
+    </div>
+</body>
+</html>
