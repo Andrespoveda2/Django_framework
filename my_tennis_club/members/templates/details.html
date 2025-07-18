@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Tennis Club - List of all members
+{% endblock %}
+
+
+{% block content %}
+
+<div class="member-detail">
+    <h2>{{ mymember.firstname }} {{ mymember.lastname }}</h2>
+
+    <div class="detail-group">
+        <p><strong>Phone:</strong> {{ mymember.phone }}</p>
+        <p><strong>Fecha de ingreso:</strong> {{ mymember.joined_date }}</p>
+        <p><strong>Email:</strong> {{ mymember.email }}</p>
+        <p><strong>Fecha de nacimiento:</strong> {{ mymember.birth_date }}</p>
+        <p><strong>Genero:</strong> {{ mymember.gender }}</p>
+    </div>
+
+    <p class="back-link">
+        <a href="/members">&larr; Back to Members</a>
+    </p>
+</div>
+
+{% endblock %}
